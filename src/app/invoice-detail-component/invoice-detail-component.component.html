@@ -1,0 +1,107 @@
+<div class="container mt-4" >
+    <div class="card">
+            <h1>Masters</h1>
+    
+    <form>
+      <div class="form-group">
+        <label>Customer ID</label>
+        <input type="text" [(ngModel)]="customerId" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Enter Name">
+      </div>
+        <div class="form-group">
+          <label>Customer Name</label>
+          <input type="text" [(ngModel)]="customerName" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Enter Name">
+        </div>
+       
+        <!-- <div class="form-group">
+          <label>Invoice Date</label>
+          <input type="text" [(ngModel)]="invDate" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Enter Name">
+        </div> -->
+
+        <div class="card" >
+          <h1>Ad Details</h1>
+          <div>
+            <label>Item Name</label>
+            <input type="text" [(ngModel)]="itemName" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Enter Name">
+          
+          </div>
+          <div>
+            <label>Quantity</label>
+            <input type="text" [(ngModel)]="itemQuantity" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Enter Name">
+           
+          </div>
+          <div>
+            <button type="submit" class="btn btn-primary mt-4" (click)="addArr()" >Add Details List</button> 
+          </div>
+        </div>
+
+
+
+
+    <!-- Details List to add -->
+    <div class="card" >
+      <table class="table">
+          <thead>
+           <h1 *ngIf="!isResultLoaded">Loading.................</h1>      
+          <tr>
+              <th scope="col">Item Name</th>
+              <th scope="col">Item Quantity</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let posItem of PosAddArray">
+                  <td>{{posItem?.itemName}}</td>
+                  <td>{{posItem.itemQuantity}}</td>
+            </tr>          
+          </tbody>
+        </table>
+      </div>
+      <button type="submit" class="btn btn-primary mt-4" (click)="save()" >Save</button>
+      </form>
+
+
+    </div>
+
+     
+
+
+
+
+      <!-- #################### view ##############################################-->
+    </div>
+
+        <div class="card" >
+            <h1>Pos View</h1>
+        <table class="table">
+            <thead>
+             <h1 *ngIf="!isResultLoaded">Loading.................</h1>      
+            <tr>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Date</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let posItem of PosArray">
+                    <td>{{posItem.customerName}}</td>
+                    <td>{{posItem.itemName}}</td>
+                    <td>{{posItem.itemQuantity}}</td>
+                    <td>{{posItem.invDate}}</td>
+
+              
+                <!-- <td>
+                  <button type="button" class="btn btn-success" (click)="setUpdate(StudentItem)">Edit</button>
+                  <button type="button" class="btn btn-danger" (click)="setDelete(StudentItem)">Delete</button>            
+                </td> -->
+              </tr>          
+            </tbody>
+          </table>
+        </div>
+
+
+
+
+
+        
