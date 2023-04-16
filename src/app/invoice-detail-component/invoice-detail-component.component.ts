@@ -38,23 +38,14 @@ export class InvoiceDetailComponentComponent {
   }
 
   getAllPos(){  
-    //this.asyncService.start();
     this.subscription =
     this.InvoiceDetailService.getPos().subscribe(resultData => {
       this.isResultLoaded = true;
         console.log(resultData);
       this.PosArray = resultData ;
-      //this.asyncService.finish();
     });
   }
 
-
-
-
-//get data end  
-
-
-// //post data start
 
   addArr(){
     let bodyData = {
@@ -69,7 +60,7 @@ export class InvoiceDetailComponentComponent {
   }
 
   register() {
-    //this.asyncService.start();
+  
     let bodyData = {
       "customerId" : this.customerId,
       "customerName" : this.customerName,
@@ -83,38 +74,7 @@ export class InvoiceDetailComponentComponent {
     });
   }
 
-// //post data end
 
-
-// //update start 
-//   setUpdate(data: any) 
-//   {
-//    this.studentName = data.studentName;
-//    this.course = data.course;
-//    this.currentStudentID = data.id;
-//   }
-
- 
-
-
-//   UpdateRecords() {
-//     let bodyData = 
-//     {
-//       "studentName" : this.studentName,
-//       "course" : this.course,
-//     };
-//     console.log("hello1111111111",bodyData,this.currentStudentID)
-//     this.StudentCrudService.updateStudent(this.currentStudentID,bodyData).subscribe((resultData) => {
-//       console.log("update test",resultData);
-//         alert("Student Registered Updateddd")
-//         this.getAllStudent();
-  
-//     });
-//   }
-
-
-
-//   //update end
  
   save()
   {
@@ -130,18 +90,6 @@ export class InvoiceDetailComponentComponent {
   }
 
 
-//   setDelete(data:any){
-//     this.StudentCrudService.deleteStdent(data).subscribe((resultData) => 
-//     {
-//            console.log("ggfdgfdfdtrtrsursrts",resultData);
-//         alert("Student Deletedddd")
-//         this.getAllStudent();
-//     }, error => {
-//       console.log("Error occured in time of delete.");
-//     });
-//   };
-
-  //delete end
 
 
 }
