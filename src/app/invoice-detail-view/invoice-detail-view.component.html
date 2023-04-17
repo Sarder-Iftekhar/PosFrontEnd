@@ -1,0 +1,31 @@
+ <!-- #################### view ##############################################-->
+
+<div class="card" >
+    <h1>Pos View</h1>
+<table class="table">
+    <thead>
+     <h1 *ngIf="!isResultLoaded">Loading.................</h1>      
+    <tr>
+        <th scope="col">Customer Name</th>
+        <th scope="col">Date</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let posItem of PosArray">
+            <td>{{posItem.customerName}}</td>
+          
+            <td>{{posItem.invDate}}</td>
+        <td>
+          <button type="button" class="btn btn-success" (click)="navigateModal(posItem)">Details</button>          
+        </td>
+      </tr>          
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+

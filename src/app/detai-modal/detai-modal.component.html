@@ -1,0 +1,27 @@
+
+ <div class="card" >
+    <h1>Details</h1>
+<table class="table">
+    <thead>
+     <h1 *ngIf="!isResultLoaded">Loading.................</h1>      
+    <tr>
+        <th scope="col">Item Name</th>
+        <th scope="col">Quantity</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let posItem of arrayDet">
+            <td>{{posItem.itemName}}</td>
+            <td>{{posItem.itemQuantity}}</td>
+       
+      </tr>          
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+

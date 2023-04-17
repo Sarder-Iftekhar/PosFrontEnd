@@ -34,17 +34,17 @@ export class InvoiceDetailComponentComponent {
   }
 
   ngOnInit(): void { 
-    this.getAllPos(); 
+    //this.getAllPos(); 
   }
 
-  getAllPos(){  
-    this.subscription =
-    this.InvoiceDetailService.getPos().subscribe(resultData => {
-      this.isResultLoaded = true;
-        console.log(resultData);
-      this.PosArray = resultData ;
-    });
-  }
+  // getAllPos(){  
+  //   this.subscription =
+  //   this.InvoiceDetailService.getPos().subscribe(resultData => {
+  //     this.isResultLoaded = true;
+  //       console.log(resultData);
+  //     this.PosArray = resultData ;
+  //   });
+  // }
 
 
   addArr(){
@@ -69,7 +69,7 @@ export class InvoiceDetailComponentComponent {
     };
     this.InvoiceDetailService.addPos(bodyData,this.PosAddArray).subscribe(() => {
       alert("Pos Registered Successfully")
-      this.getAllPos();
+      //this.getAllPos();
       
     });
   }

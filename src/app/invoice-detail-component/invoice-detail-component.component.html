@@ -1,6 +1,6 @@
 <div class="container mt-4" >
     <div class="card">
-            <h1>Master Datas</h1>
+            <h1>Master Data</h1>
     
     <form>
       <div class="form-group">
@@ -41,7 +41,7 @@
     <div class="card" >
       <table class="table">
           <thead>
-           <h1 *ngIf="!isResultLoaded">Loading.................</h1>      
+           <!-- <h1 *ngIf="!isResultLoaded">Loading.................</h1>       -->
           <tr>
               <th scope="col">Item Name</th>
               <th scope="col">Item Quantity</th>
@@ -70,7 +70,7 @@
       <!-- #################### view ##############################################-->
     </div>
 
-        <div class="card" >
+        <!-- <div class="card" >
             <h1>Pos View</h1>
         <table class="table">
             <thead>
@@ -90,16 +90,16 @@
                     <td>{{posItem.itemQuantity}}</td>
                     <td>{{posItem.invDate}}</td>
 
-              
+            
+              </tr>          
+            </tbody>
+          </table>
+        </div>  -->
+  
                 <!-- <td>
                   <button type="button" class="btn btn-success" (click)="setUpdate(StudentItem)">Edit</button>
                   <button type="button" class="btn btn-danger" (click)="setDelete(StudentItem)">Delete</button>            
                 </td> -->
-              </tr>          
-            </tbody>
-          </table>
-        </div>
-
 
 
 
